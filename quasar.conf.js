@@ -48,13 +48,16 @@ module.exports = function (ctx) {
         'QPage',
         'QToolbar',
         'QToolbarTitle',
+        'QInput',
         'QBtn',
         'QIcon',
         'QList',
         'QListHeader',
         'QItem',
         'QItemMain',
-        'QItemSide'
+        'QItemSide',
+        'QSpinnerHourglass',
+        'QSelect'
       ],
       directives: [
         'Ripple'

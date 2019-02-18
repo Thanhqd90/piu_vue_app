@@ -1,6 +1,7 @@
 <template>
   <q-page class="flex flex-center">
-    <img alt="Quasar logo" src="~assets/quasar-logo-full.svg">
+    <q-spinner-hourglass size="4rem" color="teal" />
+
   </q-page>
 </template>
 
@@ -9,6 +10,11 @@
 
 <script>
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  data () {
+    return {
+      queryText: ''
+    }
+  }
 }
 </script>

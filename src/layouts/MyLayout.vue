@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-layout-header>
       <q-toolbar
-        color="primary"
+        color="negative"
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
@@ -17,11 +17,29 @@
         </q-btn>
 
         <q-toolbar-title>
-          PIU Card Draw
-          <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
+          Results
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>
+
+        <q-layout-drawer
+      v-model="leftDrawerOpen"
+      :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
+    >
+    <q-toolbar color="negative">
+        <q-toolbar-title>
+        PIU Card Draw
+        </q-toolbar-title>
+    </q-toolbar>
+      <q-list
+        no-border
+        link
+        inset-delimiter
+      >
+        <q-list-header>Search Parameters</q-list-header>
+        <q-select />
+      </q-list>
+    </q-layout-drawer>
 
     <q-page-container>
       <router-view />
